@@ -1,0 +1,19 @@
+/* COMMON */
+body {
+  color: red;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+/* HEADER */
+header {
+  background-color: royalblue;
+}
+header .inner {
+  background-color: orange;
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto; /* 가로/세로 너비를 가진 블록 요소는 외부 여백 속성의 좌우 값이 auto 인 경우, 부모 요소 범위 안에서 가운데 정렬 */
+}
+header .logo {
+
+}
