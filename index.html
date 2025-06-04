@@ -37,6 +37,7 @@
   
   <!-- Google Material Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=login" />  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
   <!-- CSS 파일 연결 -->
   <link rel="stylesheet" href="/css/main.css">
 
@@ -44,6 +45,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="./js/main.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -52,6 +54,52 @@
       <a href="/" class="logo">
         <img src="./images/logo.png" alt="Heropy Coffee">
       </a>
+      <div class="sub-menu">
+        <ul class="menu">
+          <li>
+            <a href="/signin">Sign In</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">My Coffee</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Customer Service & Ideas</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Find a Store</a>
+          </li>
+        </ul>
+        <div class="search">
+          <input type="text">
+          <span class="material-symbols-outlined">search</span>
+        </div>
+      </div>
+      <ul class="main-menu">
+        <li class="item">
+          <div class="item_name">COFFEE</div>
+          <div class="item__containers"></div>
+        </li>
+        <li class="item">
+          <div class="item_name">MENU</div>
+          <div class="item__containers"></div>
+        </li>
+        <li class="item">
+          <div class="item_name">STORE</div>
+          <div class="item__containers"></div>
+        </li>
+        <li class="item">
+          <div class="item_name">RESPONSIBILITY</div>
+          <div class="item__containers"></div>
+        </li>
+        <li class="item">
+          <div class="item_name">MY COFFEE REWARDS</div>
+          <div class="item__containers"></div>
+        </li>
+        <li class="item">
+          <div class="item_name">WHAT'S NEW</div>
+          <div class="item__containers"></div>
+        </li>
+      </ul>
     </div>
   </header>
 </body>

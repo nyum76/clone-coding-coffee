@@ -1,19 +1,95 @@
 /* COMMON */
 body {
-  color: red;
   font-family: "Nanum Gothic", sans-serif;
+}
+
+a {
+  text-decoration: none;  /* a 요소의 밑줄 삭제 */
 }
 
 /* HEADER */
 header {
-  background-color: royalblue;
+  background-color: #f6f5f0;
 }
 header .inner {
-  background-color: orange;
   width: 1100px;
   height: 120px;
   margin: 0 auto; /* 가로/세로 너비를 가진 블록 요소는 외부 여백 속성의 좌우 값이 auto 인 경우, 부모 요소 범위 안에서 가운데 정렬 */
+  position: relative;
 }
 header .logo {
-
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+header .sub-menu ul.menu li {
+  position: relative;
+}
+header .sub-menu ul.menu li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .sub-menu ul.menu li:first-child:before {
+  display: none;
+}
+header .sub-menu ul.menu li a {
+  padding: 11px 16px;
+  display: block;   /* a 요소는 인라인 요소기에 여백의 위/아래 값을 사용할 수 없어서 블록 요소로 지정 */
+  font-size: 13px;
+  color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+header .sub-menu .search {
+  position: relative;
+  height: 34px;
+}
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;  /* input 요소는 기본적으로 outline 속성을 가지고 있는데 border 속성과 중복되지 않도록 none */
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width .4s;  /* input 요소 가로너비에 변화가 생기면 0.4초동안 애니메이션 처리 */
+}
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #EA9926;
+}
+header .sub-menu .search .material-symbols-outlined {
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: .4s;
+}
+header .sub-menu .search.focused .material-symbols-outlined {
+  opacity: 0; /* div.search 요소에 focused 클래스값이 있는 경우 아이콘 투명해지도록 */
 }
