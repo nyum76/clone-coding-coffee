@@ -1,6 +1,10 @@
 /* COMMON */
 body {
   font-family: "Nanum Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
 }
 
 a {
@@ -12,9 +16,21 @@ a {
   margin: 0 auto;
   position: relative;
 }
+
+img {
+  /* img 의 display: inline; (기본값) 따라서 이미지를 글자처럼 취급하지 않게 함 */
+  /* 글자취급 : 문자 기준선이 있음. 문자기준선 때문에 이미지 하단에 빈 공간 발생 */
+  display: block;
+}
 /* HEADER */
 header {
   background-color: #f6f5f0;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  /* position: fixed | absolute; 일 경우 가로너비가 최대한 줄어들기에 가로 너비를 다시 늘려야 함 */
+  width: 100%; 
+  border-bottom: 1px solid #c8c8c8; /* 하단 테두리선 - 영역 구분 */
 }
 header > .inner {
   height: 120px;
@@ -163,4 +179,19 @@ header .main-menu .item .item__contents .contents__texture p {
 }
 header .main-menu .item .item__containers {
 
+}
+/* BADGES */
+header .badges {
+  /* 뷰포트 기준 우상단 배치 */
+  position: absolute; /* 부모 요소 기준 배치로 z-index 속성 없이 쌓임 순서를 헤더에 의존하게 함 */
+  top: 132px;
+  right: 12px;
+}
+header .badges .badge {
+  border-radius: 10px;
+  margin-bottom: 12px;
+  /* 그림자 효과: x축 거리, y축 거리, 흐림 처리 범위, 확대/축소 범위, 색상 ( 색상 제외 단위 px ) */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+  cursor: pointer;
+  overflow: hidden;
 }
