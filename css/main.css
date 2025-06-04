@@ -116,14 +116,51 @@ header .main-menu .item .item__contents {
   background-color: orange;
   width: 100%;
   position: fixed;
-  left: 0;
+  left: 0;   /* 수직 위치 말고 수평위치만 지정 - position:fixed; 를 사용했음에도 div.item__name 요소의 바로 아래 나타날 수 있음 */
   display: none;
 }
 
 header .main-menu .item:hover .item__contents {
   display: block;
 }
-
+header .main-menu .item .item__contents .contents__menu {
+  background-color: #2c2a29;
+}
+header .main-menu .item .item__contents .contents__menu > ul {
+  padding: 20px 0;
+  display: flex;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li {
+  width: 220px;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #fff;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: #EA9926;
+}
+header .main-menu .item .item__contents .contents__texture {
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("../images/main_menu_pattern.jpg");
+  /* background-repeat: repeat; (기본값) , 출력하지 않고 싶다면 no-repeat 속성값 사용 */
+}
+header .main-menu .item .item__contents .contents__texture h4 {
+  color: #999;
+  font-weight: 900;
+}
+header .main-menu .item .item__contents .contents__texture p {
+  color: #EA9926;
+  margin: 4px 0 14px;
+}
 header .main-menu .item .item__containers {
 
 }
